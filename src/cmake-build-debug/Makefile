@@ -123,32 +123,32 @@ PEX_4_CHWA_WANG/fast:
 	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/build
 .PHONY : PEX_4_CHWA_WANG/fast
 
-main.o: main.c.o
+ternaryTree.o: ternaryTree.c.o
 
-.PHONY : main.o
+.PHONY : ternaryTree.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o
-.PHONY : main.c.o
+ternaryTree.c.o:
+	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o
+.PHONY : ternaryTree.c.o
 
-main.i: main.c.i
+ternaryTree.i: ternaryTree.c.i
 
-.PHONY : main.i
+.PHONY : ternaryTree.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.i
-.PHONY : main.c.i
+ternaryTree.c.i:
+	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.i
+.PHONY : ternaryTree.c.i
 
-main.s: main.c.s
+ternaryTree.s: ternaryTree.c.s
 
-.PHONY : main.s
+.PHONY : ternaryTree.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.s
-.PHONY : main.c.s
+ternaryTree.c.s:
+	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.s
+.PHONY : ternaryTree.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... PEX_4_CHWA_WANG"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... ternaryTree.o"
+	@echo "... ternaryTree.i"
+	@echo "... ternaryTree.s"
 .PHONY : help
 
 

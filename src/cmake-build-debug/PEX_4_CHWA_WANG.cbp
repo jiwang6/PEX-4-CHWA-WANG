@@ -74,7 +74,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.c">
+		<Unit filename="/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.h">
+			<Option target="PEX_4_CHWA_WANG"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.c">
+			<Option target="PEX_4_CHWA_WANG"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.h">
 			<Option target="PEX_4_CHWA_WANG"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/CMakeLists.txt">
