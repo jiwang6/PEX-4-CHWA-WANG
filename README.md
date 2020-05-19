@@ -5,7 +5,7 @@ C Spell Checker
 What if, hear me out, we had a program that would check our spelling? 
 Time to sell all my belongings, move to Silicon Valley, and live off Soylent and pure start-up energy. 
 
-TIME TO DISRUPT HE INDUSTRY BABY, 2070 PARADIGM SHIFT!!!!
+TIME TO DISRUPT THE INDUSTRY BABY, 2070 PARADIGM SHIFT!!!!
 
 ## Joke of the Semester
 my GPA
