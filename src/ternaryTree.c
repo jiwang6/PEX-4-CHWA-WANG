@@ -35,6 +35,8 @@ void insertTool(Node** currNode, char *word)
         // the last character of the word
         else {
             if ((*currNode)->center) {
+                if ((*currNode)->center->data == '\0') // repeated input
+                    return;
                 (*currNode)->center->left = newNode(*word);
                 (*currNode)->center->left->data = '\0';
             } else {
@@ -105,4 +107,16 @@ int searchTree(Node *currNode, char *word)
         }
         return searchTree(currNode->center, word + 1);
     }
+}
+
+void deleteTree(Node* currNode) {
+    if (currNode == NULL)
+        return;
+
+    deleteTree(currNode->left);
+    deleteTree(currNode->center);
+    deleteTree(currNode->right);
+
+    // printf("deleting node: %c\n", currNode->data);
+    free(currNode);
 }

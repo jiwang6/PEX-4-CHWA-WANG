@@ -18,7 +18,7 @@ int countWords(char *fileName)
 }
 
 
-//Where the words are actually read in and stored
+// Where the words are actually read in and stored
 void loadDictionary(char *fileName, int numWords, singleWord completeDictionary[])
 {
     FILE *dictionary = fopen(fileName, "r");
@@ -29,21 +29,17 @@ void loadDictionary(char *fileName, int numWords, singleWord completeDictionary[
     int i = 0;
     while (i < numWords)
     {
-        completeDictionary[i].numInDictionary = i+1;
+        completeDictionary[i].numInDictionary = i + 1;
         fscanf(dictionary, "%s", completeDictionary[i].word);
         i++;
     }
 }
 
-void makeTree(Node **dictionaryTree, singleWord completeDictionary[], int wc)
+void makeTree(Node **dictionaryTree, singleWord completeDictionary[], int left, int right) // broken
 {
-    int middle = wc/2; // wc is one more than the highest index num
-    int leftSide = 0;
-    int rightSide = 0;
-
-    while(wc > 0){
-        insert(dictionaryTree, completeDictionary[wc-1].word);
-        wc--;
-    }
-    // makeTree(&dictionaryTree, completeDictionary,  middle/2);
+    if(right == left)
+        return;
+    insert(dictionaryTree, completeDictionary[(left + (right - left)/2) + 1].word);
+    makeTree(dictionaryTree, completeDictionary, left, left + (right - left)/2);
+    makeTree(dictionaryTree, completeDictionary, 1 + left + (right - left)/2, right);
 }

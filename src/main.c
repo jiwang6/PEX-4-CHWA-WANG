@@ -33,14 +33,15 @@ int main()
     Node *root = NULL;
 
     char fileName[50] = "../dicts/test_dictionary.txt";
-    int wc = countWords(fileName);
+    int wc = countWords(fileName); // number of words, not max index
     singleWord completeDictionary[wc];
 
     loadDictionary(fileName, wc, completeDictionary); // put .txt into array
-    makeTree(&root, completeDictionary, wc); // put array into tree
+    makeTree(&root, completeDictionary, 0, wc - 1); // put array into tree
 
     printf("\ntree traversal:\n");
     traverseTree(root);
 
+    deleteTree(root);
     return 0;
 }

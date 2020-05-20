@@ -24,4 +24,5 @@ void traverseTreeTool(Node* currNode, char* buffer, int depth);
 void traverseTree(Node* currNode);
 int searchTree(Node *currNode, char *word);
 
+void deleteTree(Node* currNode);
 #endif //MYEXE_TERNARYTREE_H

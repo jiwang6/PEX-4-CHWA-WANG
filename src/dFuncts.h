@@ -12,12 +12,7 @@ int countWords(char *fileName);
 
 void loadDictionary(char *fileName, int numWords, singleWord completeDictionary[]);
 
-void makeTree(Node **dictionaryTree, singleWord completeDictionary[], int wc);
+void makeTree(Node **dictionaryTree, singleWord completeDictionary[], int left, int right);
 
 
 #endif //PEX_4_CHWA_WANG_DFUNCTS_H
-
-/*
-    makeTree(dictionaryTree, completeDictionary);
-    return 0;
-*/
