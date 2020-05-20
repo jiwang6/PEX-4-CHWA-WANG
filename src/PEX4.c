@@ -5,8 +5,8 @@
 * Project: PEX4 - Spell Checker
 * Purpose: Use a ternary tree to implement a spell checker.
 * Documentation: Referenced geeks for geeks implementation
- * of a ternary tree and referenced course provided binary search
- * algorithm for the makeTree function.
+ * of a ternary tree and referenced course provided binary
+ * search algorithm for the makeTree function.
 * ===========================================================
 */
 
