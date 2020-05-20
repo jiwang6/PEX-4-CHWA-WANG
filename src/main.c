@@ -13,12 +13,6 @@ int main(int argc, char* argv[])
     printf("Function Arguments (relative paths):\nDictionary File Path: %s\nTest File Path: %s\n",
             dictFile, testFile);
 
-
-    // choose your file to test
-    //strcpy(dictFile, "../files/test_dictionary.txt");
-    //strcpy(dictFile, "../files/dictionary.txt");
-    //strcpy(testFile, "../files/test1.txt");
-
     int dictWC = countWords(dictFile); // number of words
     int testWC = countWords(testFile);
 

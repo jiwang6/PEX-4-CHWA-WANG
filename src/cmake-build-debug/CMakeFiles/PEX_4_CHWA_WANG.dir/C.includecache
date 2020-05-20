@@ -10,6 +10,10 @@
 ternaryTree.h
 /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.h
 
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.c
+dFuncts.h
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.h
+
 /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.h
 string.h
 -
@@ -17,8 +21,4 @@ stdio.h
 -
 stdlib.h
 -
-
-/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTreeUnitTest.c
-dFuncts.h
-/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.h
 
