@@ -1,132 +1,108 @@
-//
-// Created by C22Christopher.Chwa on 5/18/2020.
-//
-
 #include "ternaryTree.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int main()
-{
-    char test[10] = "HELLO";
-    ternaryTree *Tree = createTree();
-    insert(Tree, test);
-    char test2[10] = "FIRE";
-    insert(Tree, test2);
-    printTree(Tree);
-    return 0;
+Node* newNode(char data){
+    Node* temp = (Node*) malloc(sizeof(Node));
+    temp->data = data;
+    temp->left = temp->center = temp->right = NULL;
+    return temp;
 }
 
-ternaryTree *createTree()
+void insertTool(Node** currNode, char *word)
 {
-    ternaryTree *Tree = malloc(sizeof(Tree));
-    Tree->root = NULL;
-    return Tree;
-}
+    // Base Case: Tree is empty
+    if (!(*currNode))
+        *currNode = newNode(*word);
 
-void insert(ternaryTree *Tree, char word[])
-{
-    if (Tree->root == NULL)
+    // If current character of word is smaller than currNode's character,
+    // then insertTool this word in left subtree of currNode
+    if (*word < (*currNode)->data)
+        insertTool(&((*currNode)->left), word);
+
+    // If current character of word is greater than currNode's character,
+    // then insertTool this word in right subtree of currNode
+    else if (*word > (*currNode)->data)
+        insertTool(&((*currNode)->right), word);
+
+    // If current character of word is same as currNode's character,
+    else
     {
-        Node *newInsert = malloc(sizeof(Node));
-        newInsert->data = word[0];
-        newInsert->left = NULL;
-        newInsert->right = NULL;
-        newInsert->center = NULL;
-        Tree->root = newInsert;
-        free(newInsert);
+        if (*(word+1))
+            insertTool(&((*currNode)->center), word + 1);
 
-        Node *currentNode = malloc(sizeof(Node));
-        currentNode = Tree->root;
-
-        int i = 1; //Set to 1 because already stored the first letter in the root
-        insertRemaining(currentNode, word, i);
-    }
-    else // not an empty tree
-    {
-        Node *currentNode;
-        currentNode = Tree->root;
-        int i = 0;
-        while (i < strlen(word))
-        {
-            if (word[i] == currentNode->data && currentNode->center != NULL)
-            {
-                currentNode = currentNode->center;
+        // the last character of the word
+        else {
+            if ((*currNode)->center) {
+                (*currNode)->center->left = newNode(*word);
+                (*currNode)->center->left->data = '\0';
+            } else {
+                (*currNode)->center = newNode(*word);
+                (*currNode)->center->data = '\0';
             }
-            else if (word[i] < currentNode->data && currentNode->left == NULL) // insert rest of the word
-            {
-                // Insert the first letter of the word
-                Node *newInsert = malloc(sizeof(Node));
-                newInsert->data = word[i];
-                newInsert->left = NULL;
-                newInsert->right = NULL;
-                newInsert->center = NULL;
-                currentNode->left = newInsert;
-                currentNode = currentNode->left;
-                i++;
-                free(newInsert);
-
-                insertRemaining(currentNode, word, i);
-                break;
-            }
-            else if (word[i] > currentNode->data && currentNode->right == NULL) // insert rest of the word
-            {
-                insertRemaining(currentNode, word, i);
-                break;
-            }
-            else if (word[i] < currentNode->data && currentNode->left != NULL)
-            {
-                currentNode = currentNode->left;
-            }
-            else if (word[i] > currentNode->data && currentNode->right != NULL)
-            {
-                currentNode = currentNode->right;
-            }
-            i++;
         }
     }
 }
 
-
-
-Node *traverseCenter(ternaryTree *Tree, Node *currentNode, char word[], int index)
-{
-    while (word[index] == currentNode->data) // goes down as far as the next letter matches the data in the tree
-    {
-        currentNode = currentNode->center;
-        index++;
-    }
-    return currentNode;
+void insert(Node** currNode, char *word) {
+    printf("Inserting %s\n", word);
+    insertTool(currNode, word);
 }
 
-void insertRemaining(Node *currentNode, char word[], int index)
+void traverseTreeTool(Node* currNode, char* buffer, int depth)
 {
-    while (word[index] != '\0')
+    if (currNode)
     {
-        Node *nextLetter = malloc(sizeof(Node));
-        nextLetter->data = word[index];
-        nextLetter->left = NULL;
-        nextLetter->right = NULL;
-        nextLetter->center = NULL;
+        // First traverse the left subtree
+        traverseTreeTool(currNode->left, buffer, depth);
 
-        currentNode->center = nextLetter; //Insert all the way down for the word.
-        currentNode = currentNode->center; //sets currentNode to the newly inserted node
-        index++;
-    }
-}
+        // Store the character of this node
+        buffer[depth] = currNode->data;
 
-
-void printTree(ternaryTree *Tree)
-{
-        Node *currentNode = malloc(sizeof(Node));
-        currentNode = Tree->root;
-        while(currentNode->data != '\0')
+        if (currNode->data == '\0')
         {
-            printf("%c\n", currentNode->data);
-            currentNode = currentNode->center;
+            printf("%s\n", buffer);
         }
-        free(currentNode);
+
+        // Traverse the subtree using equal pointer (middle subtree)
+        traverseTreeTool(currNode->center, buffer, depth + 1);
+
+        // Finally Traverse the right subtree
+        traverseTreeTool(currNode->right, buffer, depth);
+    }
 }
 
+void traverseTree(Node* currNode)
+{
+    char buffer[MAX];
+    traverseTreeTool(currNode, buffer, 0);
+}
+
+// Function to search a given word in TST
+int searchTree(Node *currNode, char *word)
+{
+    if (!currNode)
+        return 0;
+
+    if (*word < (currNode)->data)
+        return searchTree(currNode->left, word);
+
+    else if (*word > (currNode)->data)
+        return searchTree(currNode->right, word);
+
+    else
+    {
+        if (*(word+1) == '\0') { // reach end of word input
+            if (currNode->center->data == '\0') {
+                return 1;
+            } if(currNode->center->left) {
+                if(currNode->center->left->data == '\0')
+                    return 1;
+            } else {
+                return 0;
+            }
+        }
+        return searchTree(currNode->center, word + 1);
+    }
+}

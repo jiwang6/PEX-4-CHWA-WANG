@@ -123,6 +123,33 @@ PEX_4_CHWA_WANG/fast:
 	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/build
 .PHONY : PEX_4_CHWA_WANG/fast
 
+dFuncts.o: dFuncts.c.o
+
+.PHONY : dFuncts.o
+
+# target to build an object file
+dFuncts.c.o:
+	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o
+.PHONY : dFuncts.c.o
+
+dFuncts.i: dFuncts.c.i
+
+.PHONY : dFuncts.i
+
+# target to preprocess a source file
+dFuncts.c.i:
+	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.i
+.PHONY : dFuncts.c.i
+
+dFuncts.s: dFuncts.c.s
+
+.PHONY : dFuncts.s
+
+# target to generate assembly for a file
+dFuncts.c.s:
+	$(MAKE) -f CMakeFiles/PEX_4_CHWA_WANG.dir/build.make CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.s
+.PHONY : dFuncts.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... PEX_4_CHWA_WANG"
 	@echo "... edit_cache"
+	@echo "... dFuncts.o"
+	@echo "... dFuncts.i"
+	@echo "... dFuncts.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

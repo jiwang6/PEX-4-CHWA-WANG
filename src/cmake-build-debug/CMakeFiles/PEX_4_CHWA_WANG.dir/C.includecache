@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.c
+dFuncts.h
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.h
+
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.h
+ternaryTree.h
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.h
+
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.c
+dFuncts.h
+/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.h
+
 /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.c
 ternaryTree.h
 /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.h
@@ -17,4 +29,6 @@ stdlib.h
 -
 
 /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/ternaryTree.h
+stdio.h
+-
 

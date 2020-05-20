@@ -1,10 +1,11 @@
-//
-// Created by C22Christopher.Chwa on 5/18/2020.
-//
-
 #ifndef MYEXE_TERNARYTREE_H
 #define MYEXE_TERNARYTREE_H
 
+#define MAX 50
+
+#include <stdio.h>
+
+// define tst node
 typedef struct node
 {
     char data;
@@ -13,23 +14,12 @@ typedef struct node
     struct node* right;
 } Node;
 
-typedef struct
-{
-    Node* root;
-} ternaryTree;
+Node* newNode(char data);
+void insertTool(Node** currNode, char *word);
+void insert(Node** currNode, char *word);
 
-
-
-
-ternaryTree *createTree();
-
-
-Node *traverseCenter(ternaryTree *Tree, Node *currentNode, char word[], int index);
-
-void insert(ternaryTree *Tree, char word[]);
-
-void insertRemaining(Node *currentNode, char word[], int index);
-
-void printTree(ternaryTree *Tree);
+void traverseTreeTool(Node* currNode, char* buffer, int depth);
+void traverseTree(Node* currNode);
+int searchTree(Node *currNode, char *word);
 
 #endif //MYEXE_TERNARYTREE_H
