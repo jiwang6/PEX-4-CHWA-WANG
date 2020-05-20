@@ -3,7 +3,9 @@
 
 #define MAX 50
 
+#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 // define tst node
 typedef struct node

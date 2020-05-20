@@ -2,6 +2,7 @@
 
 int main()
 {
+/*
     Node *root = NULL;
 
     insert(&root, "cat");
@@ -28,8 +29,18 @@ int main()
     searchTree(root, "iss") ? printf("Found\n") : printf("Not Found\n");
     searchTree(root, "do") ? printf("Found\n") : printf("Not Found\n");
     searchTree(root, "doolies") ? printf("Found\n") : printf("Not Found\n");
+*/
+    Node *root = NULL;
 
+    char fileName[50] = "../dicts/test_dictionary.txt";
+    int wc = countWords(fileName);
+    singleWord completeDictionary[wc];
 
+    loadDictionary(fileName, wc, completeDictionary); // put .txt into array
+    makeTree(&root, completeDictionary, wc); // put array into tree
+
+    printf("\ntree traversal:\n");
+    traverseTree(root);
 
     return 0;
 }
