@@ -1,3 +1,19 @@
+//
+// Created by C2C Chwa and C2C Wang.
+//
+
+
+/** PEX4.c
+* ===========================================================
+* Name: Christopher Chwa and Jim Wang, 18 May, 2020
+* Section: T6 & T2A
+* Project: PEX4 - Spell Checker
+* Purpose: Use a ternary tree to implement a spell checker.
+* Documentation: Referenced geeks for geeks implementation of a ternary tree and referenced course provided binary search
+* Algorithm for the makeTree function.
+* ===========================================================
+*/
+
 #include "ternaryTree.h"
 #include <string.h>
 #include <stdio.h>
@@ -10,6 +26,12 @@ Node* newNode(char data){
     return temp;
 }
 
+
+/** -------------------------------------------------------------------
+ * Inserts a word into the tree, uses recursion.
+ * @param currentNode and the word to insert
+ * @return nothing
+  -------------------------------------------------------------------*/
 void insert(Node** currNode, char *word)
 {
     if (!(*currNode)) // base case: empty tree
@@ -40,11 +62,23 @@ void insert(Node** currNode, char *word)
     }
 }
 
+
+/** -------------------------------------------------------------------
+ * Calls the insert function and prints the word being inserted.
+ * @param Current node and the word to be inserted
+ * @return nothing
+  -------------------------------------------------------------------*/
 void insertTest(Node** currNode, char *word) { // prints insert order before inserting
     printf("Inserting %s\n", word);
     insert(currNode, word);
 }
 
+
+/** -------------------------------------------------------------------
+ * Does an in order traversal of the tree and prints the in order traversal. Uses recursion
+ * @param The current node, buffer(holds the data of the node), and depth
+ * @return nothing
+  -------------------------------------------------------------------*/
 void traverseTreeTool(Node* currNode, char* buffer, int depth)
 {
     if (currNode)
@@ -64,12 +98,24 @@ void traverseTreeTool(Node* currNode, char* buffer, int depth)
     }
 }
 
+
+/** -------------------------------------------------------------------
+ * Calls traverseTreeTool. See above
+ * @param Pointer to the current node.
+ * @return nothing
+  -------------------------------------------------------------------*/
 void traverseTree(Node* currNode)
 {
     char buffer[MAX];
     traverseTreeTool(currNode, buffer, 0);
 }
 
+
+/** -------------------------------------------------------------------
+ * Searches for the word in the ternary tree letter by letter. Terminates when it gets to '\0' character. Uses recursion.
+ * @param Current node and the word it is searching for.
+ * @return returns 1 or 0, 1 if the word is found, 0 if it is not found aka spelled incorrectly
+  -------------------------------------------------------------------*/
 int searchTree(Node *currNode, char *word)
 {
     if (!currNode)
@@ -97,6 +143,12 @@ int searchTree(Node *currNode, char *word)
     }
 }
 
+
+/** -------------------------------------------------------------------
+ * Deletes the tree node by node.
+ * @param Current node to delete. Tree is deleted when the node is NULL, where all the nodes are deleted.
+ * @return Nothing
+  -------------------------------------------------------------------*/
 void deleteTree(Node* currNode) {
     if (currNode == NULL)
         return;

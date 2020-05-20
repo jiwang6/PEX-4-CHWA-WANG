@@ -1,4 +1,21 @@
+//
+// Created by C2C Chwa and C2C Wang.
+//
+
+
+/** PEX4.c
+* ===========================================================
+* Name: Christopher Chwa and Jim Wang, 18 May, 2020
+* Section: T6 & T2A
+* Project: PEX4 - Spell Checker
+* Purpose: Use a ternary tree to implement a spell checker.
+* Documentation: Referenced geeks for geeks implementation of a ternary tree and referenced course provided binary search
+* Algorithm for the makeTree function.
+* ===========================================================
+*/
+
 #include "dFuncts.h"
+
 
 int main(int argc, char* argv[])
 {

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o"
   "CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o"
   "CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o"
-  "CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o"
-  "PEX_4_CHWA_WANG.exe"
   "PEX_4_CHWA_WANG.pdb"
+  "PEX_4_CHWA_WANG.exe"
   "libPEX_4_CHWA_WANG.dll.a"
 )
 

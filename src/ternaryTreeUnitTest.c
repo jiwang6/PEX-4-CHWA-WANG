@@ -49,11 +49,12 @@ int main(void) {
         free(completeTest[i]);
     free(completeTest);
 
+    fclose(dictFile);
+    fclose(testFile);
+
 
     // delete tree
     deleteTree(root);
-
-    return 0;
 
     return 0;
 }

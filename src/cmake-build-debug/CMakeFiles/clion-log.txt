@@ -1,4 +1,4 @@
-C:\Users\C22Jim.Wang\.CLion2019.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src
+C:\Users\C22Christopher.Chwa\.CLion2018.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/cygwin64/bin/make.exe -DCMAKE_C_COMPILER=C:/cygwin64/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/cygwin64/bin/g++.exe -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/C22Christopher.Chwa/PEX-4-CHWA-WANG/src
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/cmake-build-debug
+-- Build files have been written to: /cygdrive/c/Users/C22Christopher.Chwa/PEX-4-CHWA-WANG/src/cmake-build-debug
