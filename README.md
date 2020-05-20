@@ -28,7 +28,10 @@ where `arg1` is the relative file path to a dictionary file (e.g. `../files/dict
 the relative file path to a test file (e.g. `../files/test1.txt`).
 
 #### CLion IDE
-If you choose to run via CLion, it is configured to run
+If you choose to run via CLion, **you will need to reload the CMake Project before running**. Otherwise, caching issues
+ will prevent the build from finishing.
+ 
+It is configured to run
 ```shell script
 PEX_4_CHWA_WANG.exe ../files/dictionary.txt ../files/test1.txt
 ```
