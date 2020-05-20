@@ -12,7 +12,7 @@
 
 #include "dFuncts.h"
 
-int main(int argc, char* argv[])
+int main(int argc, char* argv[]) // if program doesn't run, reload CMakeLists.txt
 {
     Node *root = NULL;
 
