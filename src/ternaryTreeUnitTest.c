@@ -1,23 +1,17 @@
 #include "dFuncts.h"
 
-int main(int argc, char* argv[])
-{
+int main(void) {
     Node *root = NULL;
 
     char dictFile[50];
     char testFile[50];
 
-    strcpy(dictFile, argv[1]);
-    strcpy(testFile, argv[2]);
+    strcpy(dictFile, "../files/test_dictionary.txt");
+    //strcpy(dictFile, "../files/dictionary.txt");
+    strcpy(testFile, "../files/test1.txt");
 
     printf("Function Arguments (relative paths):\nDictionary File Path: %s\nTest File Path: %s\n",
-            dictFile, testFile);
-
-
-    // choose your file to test
-    //strcpy(dictFile, "../files/test_dictionary.txt");
-    //strcpy(dictFile, "../files/dictionary.txt");
-    //strcpy(testFile, "../files/test1.txt");
+           dictFile, testFile);
 
     int dictWC = countWords(dictFile); // number of words
     int testWC = countWords(testFile);
@@ -34,9 +28,13 @@ int main(int argc, char* argv[])
     loadFile(dictFile, dictWC, completeDictionary); // put .txt into array
     loadFile(testFile, testWC, completeTest);
 
-    makeTree(&root, completeDictionary, 0, dictWC); // put array into tree
+    printf("\nBalanced Tree Insertion Test:\n");
+    makeTreeTest(&root, completeDictionary, 0, dictWC); // put array into tree
 
-    printf("\nSpellchecking: \n");
+    printf("\nTree Insertion Test:\n");
+    traverseTree(root);
+
+    printf("\nSpellcheck Test:\n");
     for (int i = 0; i < testWC; i++) {
         printf("%s: ", completeTest[i]);
         searchTree(root, completeTest[i]) ? printf("Correct\n") : printf("Incorrect\n");
@@ -54,6 +52,8 @@ int main(int argc, char* argv[])
 
     // delete tree
     deleteTree(root);
+
+    return 0;
 
     return 0;
 }

@@ -3,16 +3,11 @@
 
 #include "ternaryTree.h"
 
-typedef struct {
-    char word[100];
-    int numInDictionary;
-} singleWord;
-
 int countWords(char *fileName);
 
-void loadDictionary(char *fileName, int numWords, singleWord completeDictionary[]);
+void loadFile(char *fileName, int numWords, char** completeDictionary);
 
-void makeTree(Node **dictionaryTree, singleWord completeDictionary[], int left, int right);
+void makeTree(Node **dictionaryTree, char** completeDictionary, int left, int right);
 
-
+void makeTreeTest(Node **dictionaryTree, char** completeDictionary, int left, int right);
 #endif //PEX_4_CHWA_WANG_DFUNCTS_H

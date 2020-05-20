@@ -5,10 +5,10 @@ CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o: ../dFuncts.c
 CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o: ../dFuncts.h
 CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o: ../ternaryTree.h
 
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o: ../dFuncts.h
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o: ../main.c
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o: ../ternaryTree.h
-
 CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o: ../ternaryTree.c
 CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o: ../ternaryTree.h
+
+CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTreeUnitTest.c.o: ../dFuncts.h
+CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTreeUnitTest.c.o: ../ternaryTree.h
+CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTreeUnitTest.c.o: ../ternaryTreeUnitTest.c
 

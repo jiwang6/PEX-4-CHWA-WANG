@@ -19,7 +19,7 @@ int countWords(char *fileName)
 
 
 // Where the words are actually read in and stored
-void loadDictionary(char *fileName, int numWords, singleWord completeDictionary[])
+void loadFile(char *fileName, int numWords, char** completeDictionary)
 {
     FILE *dictionary = fopen(fileName, "r");
     if (dictionary == NULL) {
@@ -29,17 +29,25 @@ void loadDictionary(char *fileName, int numWords, singleWord completeDictionary[
     int i = 0;
     while (i < numWords)
     {
-        completeDictionary[i].numInDictionary = i + 1;
-        fscanf(dictionary, "%s", completeDictionary[i].word);
+        fscanf(dictionary, "%s", completeDictionary[i]);
         i++;
     }
 }
 
-void makeTree(Node **dictionaryTree, singleWord completeDictionary[], int left, int right) // broken
+void makeTree(Node **dictionaryTree, char** completeDictionary, int left, int right)
 {
     if(right == left)
         return;
-    insert(dictionaryTree, completeDictionary[(left + (right - left)/2) + 1].word);
+    insert(dictionaryTree, completeDictionary[(left + (right - left) / 2)]); // algebra is hard
     makeTree(dictionaryTree, completeDictionary, left, left + (right - left)/2);
     makeTree(dictionaryTree, completeDictionary, 1 + left + (right - left)/2, right);
+}
+
+void makeTreeTest(Node **dictionaryTree, char** completeDictionary, int left, int right)
+{
+    if(right == left)
+        return;
+    insertTest(dictionaryTree, completeDictionary[(left + (right - left) / 2)]); // algebra is hard
+    makeTreeTest(dictionaryTree, completeDictionary, left, left + (right - left)/2);
+    makeTreeTest(dictionaryTree, completeDictionary, 1 + left + (right - left)/2, right);
 }

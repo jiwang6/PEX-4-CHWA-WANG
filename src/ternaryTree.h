@@ -17,8 +17,8 @@ typedef struct node
 } Node;
 
 Node* newNode(char data);
-void insertTool(Node** currNode, char *word);
 void insert(Node** currNode, char *word);
+void insertTest(Node** currNode, char *word);
 
 void traverseTreeTool(Node* currNode, char* buffer, int depth);
 void traverseTree(Node* currNode);

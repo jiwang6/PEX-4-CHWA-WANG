@@ -10,68 +10,57 @@ Node* newNode(char data){
     return temp;
 }
 
-void insertTool(Node** currNode, char *word)
+void insert(Node** currNode, char *word)
 {
-    // Base Case: Tree is empty
-    if (!(*currNode))
+    if (!(*currNode)) // base case: empty tree
         *currNode = newNode(*word);
 
-    // If current character of word is smaller than currNode's character,
-    // then insertTool this word in left subtree of currNode
-    if (*word < (*currNode)->data)
-        insertTool(&((*currNode)->left), word);
+    if (*word < (*currNode)->data) // if char < currNode, left subtree
+        insert(&((*currNode)->left), word);
 
-    // If current character of word is greater than currNode's character,
-    // then insertTool this word in right subtree of currNode
-    else if (*word > (*currNode)->data)
-        insertTool(&((*currNode)->right), word);
+    else if (*word > (*currNode)->data) // if char > currNode, right subtree
+        insert(&((*currNode)->right), word);
 
-    // If current character of word is same as currNode's character,
-    else
+    else // if char == currNode
     {
-        if (*(word+1))
-            insertTool(&((*currNode)->center), word + 1);
+        if (*(word+1)) // if there is a char after currNode, center
+            insert(&((*currNode)->center), word + 1);
 
-        // the last character of the word
-        else {
-            if ((*currNode)->center) {
+        else { // last char in word
+            if ((*currNode)->center) { // if there's more nodes in center branch
                 if ((*currNode)->center->data == '\0') // repeated input
                     return;
-                (*currNode)->center->left = newNode(*word);
+                (*currNode)->center->left = newNode(*word); // create node left, end word early
                 (*currNode)->center->left->data = '\0';
             } else {
-                (*currNode)->center = newNode(*word);
+                (*currNode)->center = newNode(*word); // create node under, end word
                 (*currNode)->center->data = '\0';
             }
         }
     }
 }
 
-void insert(Node** currNode, char *word) {
+void insertTest(Node** currNode, char *word) { // prints insert order before inserting
     printf("Inserting %s\n", word);
-    insertTool(currNode, word);
+    insert(currNode, word);
 }
 
 void traverseTreeTool(Node* currNode, char* buffer, int depth)
 {
     if (currNode)
     {
-        // First traverse the left subtree
-        traverseTreeTool(currNode->left, buffer, depth);
+        traverseTreeTool(currNode->left, buffer, depth); // traverse left subtree
 
-        // Store the character of this node
-        buffer[depth] = currNode->data;
+        buffer[depth] = currNode->data; // store char from node
 
         if (currNode->data == '\0')
         {
             printf("%s\n", buffer);
         }
 
-        // Traverse the subtree using equal pointer (middle subtree)
-        traverseTreeTool(currNode->center, buffer, depth + 1);
+        traverseTreeTool(currNode->center, buffer, depth + 1); // traverse middle subtree
 
-        // Finally Traverse the right subtree
-        traverseTreeTool(currNode->right, buffer, depth);
+        traverseTreeTool(currNode->right, buffer, depth); // traverse right subtree
     }
 }
 
@@ -81,7 +70,6 @@ void traverseTree(Node* currNode)
     traverseTreeTool(currNode, buffer, 0);
 }
 
-// Function to search a given word in TST
 int searchTree(Node *currNode, char *word)
 {
     if (!currNode)
@@ -96,12 +84,12 @@ int searchTree(Node *currNode, char *word)
     else
     {
         if (*(word+1) == '\0') { // reach end of word input
-            if (currNode->center->data == '\0') {
+            if (currNode->center->data == '\0') { // if null end
                 return 1;
-            } if(currNode->center->left) {
-                if(currNode->center->left->data == '\0')
+            } if (currNode->center->left) { // if there is a left node
+                if(currNode->center->left->data == '\0') // if that left node is null end
                     return 1;
-            } else {
+            } else { // word not found
                 return 0;
             }
         }
@@ -117,6 +105,5 @@ void deleteTree(Node* currNode) {
     deleteTree(currNode->center);
     deleteTree(currNode->right);
 
-    // printf("deleting node: %c\n", currNode->data);
     free(currNode);
 }

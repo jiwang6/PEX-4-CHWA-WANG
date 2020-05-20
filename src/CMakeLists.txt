@@ -3,4 +3,4 @@ project(PEX_4_CHWA_WANG C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(PEX_4_CHWA_WANG main.c ternaryTree.c dFuncts.c)
+add_executable(PEX_4_CHWA_WANG ternaryTree.c dFuncts.c main.c ) #ternaryTreeUnitTest.c
