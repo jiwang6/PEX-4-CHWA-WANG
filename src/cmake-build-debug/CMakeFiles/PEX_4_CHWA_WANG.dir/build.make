@@ -83,31 +83,31 @@ CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/dFuncts.c -o CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.s
 
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o: CMakeFiles/PEX_4_CHWA_WANG.dir/flags.make
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o   -c /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.c
+CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.o: CMakeFiles/PEX_4_CHWA_WANG.dir/flags.make
+CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.o: ../PEX4.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.o   -c /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/PEX4.c
 
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.c > CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.i
+CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/PEX4.c > CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.i
 
-CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/main.c -o CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.s
+CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/PEX4.c -o CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.s
 
 # Object files for target PEX_4_CHWA_WANG
 PEX_4_CHWA_WANG_OBJECTS = \
 "CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o" \
 "CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o" \
-"CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o"
+"CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.o"
 
 # External object files for target PEX_4_CHWA_WANG
 PEX_4_CHWA_WANG_EXTERNAL_OBJECTS =
 
 PEX_4_CHWA_WANG.exe: CMakeFiles/PEX_4_CHWA_WANG.dir/ternaryTree.c.o
 PEX_4_CHWA_WANG.exe: CMakeFiles/PEX_4_CHWA_WANG.dir/dFuncts.c.o
-PEX_4_CHWA_WANG.exe: CMakeFiles/PEX_4_CHWA_WANG.dir/main.c.o
+PEX_4_CHWA_WANG.exe: CMakeFiles/PEX_4_CHWA_WANG.dir/PEX4.c.o
 PEX_4_CHWA_WANG.exe: CMakeFiles/PEX_4_CHWA_WANG.dir/build.make
 PEX_4_CHWA_WANG.exe: CMakeFiles/PEX_4_CHWA_WANG.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/C22Jim.Wang/Documents/PEX-4-CHWA-WANG/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable PEX_4_CHWA_WANG.exe"

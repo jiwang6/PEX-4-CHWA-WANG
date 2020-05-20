@@ -1,3 +1,14 @@
+/** ternaryTreeUnitTest.c
+* ===========================================================
+* Name: Christopher Chwa and Jim Wang, 18 May, 2020
+* Section: T6 & T2A
+* Project: PEX4 - Spell Checker
+* Purpose: alternate driver function to test balanced insert,
+ * tree insert, tree traversal, and spellcheck functionality.
+ * Will need to include in CMakeLists.txt to work
+* ===========================================================
+*/
+
 #include "dFuncts.h"
 
 int main(void) {

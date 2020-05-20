@@ -1,16 +1,9 @@
-//
-// Created by C2C Chwa and C2C Wang.
-//
-
-
-/** PEX4.c
+/** ternaryTree.c
 * ===========================================================
 * Name: Christopher Chwa and Jim Wang, 18 May, 2020
 * Section: T6 & T2A
 * Project: PEX4 - Spell Checker
-* Purpose: Use a ternary tree to implement a spell checker.
-* Documentation: Referenced geeks for geeks implementation of a ternary tree and referenced course provided binary search
-* Algorithm for the makeTree function.
+* Purpose: Implement ternary tree functionality
 * ===========================================================
 */
 
@@ -19,6 +12,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/** -------------------------------------------------------------------
+ * Creates new node and loads data into node.
+ * @param data, the word to be loaded into the node
+ * @return node pointer to new node
+  -------------------------------------------------------------------*/
 Node* newNode(char data){
     Node* temp = (Node*) malloc(sizeof(Node));
     temp->data = data;
@@ -100,7 +98,8 @@ void traverseTreeTool(Node* currNode, char* buffer, int depth)
 
 
 /** -------------------------------------------------------------------
- * Calls traverseTreeTool. See above
+ * Creates output buffer and calls traverseTreeTool (see above) to fill
+ * buffer.
  * @param Pointer to the current node.
  * @return nothing
   -------------------------------------------------------------------*/
@@ -112,7 +111,8 @@ void traverseTree(Node* currNode)
 
 
 /** -------------------------------------------------------------------
- * Searches for the word in the ternary tree letter by letter. Terminates when it gets to '\0' character. Uses recursion.
+ * Searches for the word in the ternary tree letter by letter.
+ * Terminates when it gets to '\0' character. Uses recursion.
  * @param Current node and the word it is searching for.
  * @return returns 1 or 0, 1 if the word is found, 0 if it is not found aka spelled incorrectly
   -------------------------------------------------------------------*/
@@ -146,7 +146,8 @@ int searchTree(Node *currNode, char *word)
 
 /** -------------------------------------------------------------------
  * Deletes the tree node by node.
- * @param Current node to delete. Tree is deleted when the node is NULL, where all the nodes are deleted.
+ * @param Current node to delete. Tree is deleted when the node is
+ * NULL, where all the nodes are deleted.
  * @return Nothing
   -------------------------------------------------------------------*/
 void deleteTree(Node* currNode) {
